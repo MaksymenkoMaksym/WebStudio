@@ -1,0 +1,60 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 100;
+
+  width: 100%;
+  border-bottom: 1px solid var(--header-border-bottom);
+
+  background-color: var(--bg-color-white);
+}
+
+.navigation-panel {
+  display: flex;
+}
+
+.main-nav {
+  @include dispay-vertical-horizontal-gap(flex, center, center, null);
+  &__logo {
+    margin-right: 93px;
+  }
+}
+
+.site-nav {
+  @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts {
+  @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
+  margin-left: auto;
+
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include dispay-vertical-horizontal-gap(flex, center, center, 10px);
+    color: inherit;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.link--active::after {
+  position: absolute;
+  bottom: -1px;
+
+  content: '';
+  display: block;
+  width: 100%;
+
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}

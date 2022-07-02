@@ -1,0 +1,36 @@
+/*-------------FOOTER Sign up form ----------*/
+.sign-up {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.sign-up__block {
+  display: block;
+  margin-right: 12px;
+}
+
+.button__txt {
+  margin-right: 10px;
+}
+
+.sign-up__input {
+  display: block;
+  width: 358px;
+  height: 50px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+
+  padding: 15px 16px;
+  border: 1px solid var(--input-border);
+  background-color: var(--bg-color-black);
+  border-radius: 4px;
+  color: var(--input-text);
+}
+
+.sign-up__input::placeholder {
+  color: var(--input-placeholder);
+}

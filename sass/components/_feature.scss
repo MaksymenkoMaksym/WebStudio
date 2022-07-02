@@ -1,0 +1,27 @@
+.feature {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+
+.feature-list {
+  @include flex-position-gap(center, 30px);
+  &__item {
+    @include flex_item_width(4, 30px);
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include font(null, 14, 24, 0.03, null);
+  }
+
+  &__icon {
+    @include dispay-vertical-horizontal-gap(flex, center, center, null);
+
+    height: 120px;
+    margin-bottom: 30px;
+
+    border-radius: 4px;
+    background-color: var(--bg-color-gray);
+  }
+}

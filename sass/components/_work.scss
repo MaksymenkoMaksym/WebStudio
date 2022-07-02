@@ -1,0 +1,28 @@
+.works {
+  padding-top: 47px;
+  padding-bottom: 94px;
+  &__title {
+    margin-bottom: 50px;
+  }
+}
+
+.works-list {
+  @include flex-position-gap(center, 30px);
+
+  &__item {
+    @include flex_item_width(3, 30px);
+  }
+
+  &__subtitle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    text-align: center;
+    background-color: var(--bg-color-transparent-grey);
+    color: var(--title-white-color);
+  }
+}

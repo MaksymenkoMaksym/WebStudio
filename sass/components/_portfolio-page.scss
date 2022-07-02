@@ -1,0 +1,80 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.product {
+  @include flex-position-gap(center, 30px);
+
+  &__item {
+    @include flex_item_width(3, 30px);
+  }
+}
+
+/*-------------- PAGE FILTER--------- */
+.filter {
+  @include flex-position-gap(center, 8px);
+
+  margin-bottom: 50px;
+}
+/*---------- PAGE FILTER-------------- */
+.product__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product__tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  opacity: 0;
+  @include font(null, 18, 28, 0.03, null);
+
+  color: var(--tooltip-color);
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  /* animation */
+  @include transition-two(opacity, transform, 250ms, null);
+
+  .product__link:hover &,
+  .product__link:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.product__block {
+  padding: 20px 24px;
+  border: 1px solid var(--card-border-color);
+}
+
+.product__link {
+  color: var(--main-text-color);
+  @include transition(box-shadow, 250ms, null);
+
+  &:hover,
+  &:focus {
+    color: var(--main-text-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+// Text
+.product {
+  &__subtitle {
+    margin-bottom: 4px;
+    @include font(null, 18, 36, 0.06, null);
+    text-transform: none;
+  }
+
+  &__text {
+    @include font(null, 16, 30, 0.03, null);
+  }
+}

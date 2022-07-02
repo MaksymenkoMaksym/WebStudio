@@ -1,0 +1,52 @@
+:root {
+  /* Colors */
+  --accent-color: #2196f3;
+
+  --bg-color-white: #ffffff;
+  --bg-color-gray: #f5f4fa;
+  --bg-color-black: #2f303a;
+  --bg-color-transparent-grey: rgba(47, 48, 58, 0.8);
+  --bg-backdrop: rgba(0, 0, 0, 0.2);
+
+  --btn-text-color: #ffffff;
+  --btn-text-color-secondary: #212121;
+  --btn-border: rgba(0, 0, 0, 0.1);
+  --btn-bg-color-gray: #f5f4fa;
+  --btn-bg-color-white: #ffffff;
+
+  --title-text-color: #212121;
+
+  --title-white-color: #ffffff;
+
+  --main-text-color: #757575;
+
+  --address-text-gray: rgba(255, 255, 255, 0.6);
+  --address-text-white: #ffffff;
+
+  --header-border-bottom: #ececec;
+
+  --white-color-logo: #ffffff;
+  --black-color-logo: #000000;
+
+  --hero-gradient-color: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+  --box-shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --bg-social-link: rgba(255, 255, 255, 0.1);
+  --social-icon-color-hover: #ffffff;
+  --social-icon-color: #afb1b8;
+  --client-icon-color: #afb1b8;
+  --client-border-color: #afb1b8;
+
+  --input-border: rgba(255, 255, 255, 0.3);
+  --input-placeholder: rgba(255, 255, 255, 0.6);
+  --input-text: rgba(255, 255, 255, 0.6);
+  --tooltip-color: #ffffff;
+  --card-border-color: #eeeeee;
+
+  /* Other */
+  --indent: 30px;
+  --items: 3;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

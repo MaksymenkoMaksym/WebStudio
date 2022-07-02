@@ -1,0 +1,30 @@
+/* SOCIAL NETS */
+.social {
+  @include flex-position-gap(center, 10px);
+}
+
+.social__link {
+  @include flex-position-gap(center, null);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--social-icon-color);
+
+  /* animation */
+  @include transition-two(color, background-color, 250ms, null);
+
+  &--background {
+    background-color: var(--bg-social-link);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    outline: none;
+    color: var(--social-icon-color-hover);
+  }
+}
+
+.social__icon {
+  fill: currentColor;
+}
