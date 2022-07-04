@@ -9,52 +9,158 @@
   border-bottom: 1px solid var(--header-border-bottom);
 
   background-color: var(--bg-color-white);
+  &__logo {
+    @media screen and (min-width: $min-width-mob) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: $min-width-tab) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: $min-width-desc) {
+      margin-right: 93px;
+    }
+  }
 }
 
 .navigation-panel {
-  display: flex;
-}
+  // display: none;
+  @media screen and (min-width: $min-width-tab) {
+    display: flex;
+  }
 
+  @media screen and (min-width: $min-width-desc) {
+    display: flex;
+  }
+  &__social {
+    @media screen and (min-width: $min-width-tab) {
+      display: none;
+    }
+    @media screen and (min-width: $min-width-desc) {
+      display: none;
+    }
+  }
+}
+// ===============
+//
 .main-nav {
-  @include dispay-vertical-horizontal-gap(flex, center, center, null);
-  &__logo {
-    margin-right: 93px;
+  @media screen and (min-width: $min-width-tab) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    @include dispay-vertical-horizontal-gap(flex, center, center, null);
   }
 }
 
 .site-nav {
-  @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
-  &__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  @media screen and (min-width: $min-width-mob) {
+    @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
+    flex-direction: column;
   }
+
+  @media screen and (min-width: $min-width-tab) {
+    @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
+    flex-direction: row;
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  // @media screen and (min-width: $min-width-desc) {
+  //   @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
+  //   &__link {
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //   }
+  // }
 }
 
-.contacts {
-  @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
-  margin-left: auto;
+.contacts-list {
+  @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
+  flex-direction: column;
+  margin-bottom: 64px;
+  margin-top: auto;
 
-  &__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    @include dispay-vertical-horizontal-gap(flex, center, center, 10px);
-    color: inherit;
+  @media screen and (min-width: $min-width-tab) {
+    @include dispay-vertical-horizontal-gap(flex, flex-start, center, 10px);
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
+    flex-direction: row;
+    margin-left: auto;
   }
 
   &__icon {
-    fill: currentColor;
+    display: none;
+    @media screen and (min-width: $min-width-tab) {
+      display: block;
+      fill: currentColor;
+    }
+  }
+}
+
+.contacts-list__link {
+  &--blue {
+    @include font(500, 34, 40, 0.02, none);
+    color: #2196f3;
+    @media screen and (min-width: $min-width-tab) {
+      padding-bottom: 21px;
+    }
+    @media screen and (min-width: $min-width-desc) {
+      padding-bottom: 0;
+    }
+  }
+  &--grey {
+    @include font(null, 24, 28, 0.02, null);
+    color: currentColor;
+    @media screen and (min-width: $min-width-tab) {
+      padding-top: 21px;
+    }
+    @media screen and (min-width: $min-width-desc) {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: $min-width-tab) {
+    @include font(500, 12, 14, 0.02, null);
+    color: currentColor;
+    @include dispay-vertical-horizontal-gap(flex, center, center, 8px);
+
+    color: inherit;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    @include font(500, 14, 16, 0.02, none);
+    @include dispay-vertical-horizontal-gap(flex, center, center, 10px);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: inherit;
   }
 }
 
 .link--active::after {
-  position: absolute;
-  bottom: -1px;
+  @media screen and (min-width: $min-width-tab) {
+    position: absolute;
+    bottom: -1px;
 
-  content: '';
-  display: block;
-  width: 100%;
+    content: '';
+    display: block;
+    width: 100%;
 
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
 }

@@ -1,35 +1,35 @@
-@import './base/normalize';
+@import './base/normalize'; //done
 
-@import './components/vars';
+@import './components/vars'; //done
 
-@import './base/reset';
+@import './mobile/reset-mob'; //done
 
-@import './components/placeholder';
+@import './components/placeholder'; //done
 
-@import './utils/_utils';
+@import './mobile/utils-mob'; //done
 
-@import './components/logo';
+@import './mobile/logo-mob'; //done
 
-@import './components/button';
+@import './mobile/button-mob'; //done
 
-@import './components/header';
+@import './components/header'; //done!
 
-@import './components/footer';
+@import './components/footer'; //done!
 
-@import './components/hero-section';
+@import './mobile/hero-mob'; //done!
 
-@import './components/feature';
+@import './mobile/features-mob'; //done!
 
-@import './components/work';
+@import './mobile/works-mob'; //done!
 
-@import './components/team';
+@import './mobile/team-mob'; //done!
 
-@import './components/clients';
+@import './mobile/clients-mob'; //done!
 
-@import './components/modal';
+@import './mobile/modal-mob';
 
-@import './components/portfolio-page';
+@import './mobile/portfolio-mob'; //done!
 
-@import './components/forms';
+@import './mobile/forms-mob';
 
-@import './components/socials';
+@import './components/socials'; //done!

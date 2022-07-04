@@ -1,0 +1,105 @@
+.list {
+  list-style-type: none;
+}
+
+.hidden-element {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  /* Second method */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Non-prefixed version, currentlynot supported by any browser */
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $min-width-mob) {
+    position: relative;
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $min-width-tab) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    max-width: 1200px;
+  }
+}
+
+.link {
+  position: relative;
+  display: block;
+  color: var(--title-text-color);
+  @include font(500, 40, 47, 0.02, none);
+
+  @include transition(color, 250ms, null);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+  @media screen and (min-width: $min-width-mob) {
+    @include font(500, 40, 47, 0.02, none);
+  }
+  @media screen and (min-width: $min-width-tab) {
+    @include font(500, 14, 16, 0.02, none);
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    @include font(500, 14, 16, 0.02, none);
+  }
+}
+
+.title {
+  color: var(--title-text-color);
+  @include font(null, 28, 33, 0.03, none);
+  text-align: center;
+
+  @media screen and (min-width: $min-width-desc) {
+    @include font(null, 36, 42, 0.03, none);
+  }
+}
+
+.subtitle {
+  color: var(--title-text-color);
+
+  @include font(null, 14, 16, 0.03, none);
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: $min-width-mob) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $min-width-tab) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    text-align: left;
+    @include font(null, 14, 16, 0.03, none);
+  }
+}

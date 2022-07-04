@@ -1,0 +1,239 @@
+/* MODAL */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 101;
+
+  cursor: not-allowed;
+  padding: 94px 15px;
+
+  color: #000000;
+  background-color: var(--bg-backdrop);
+
+  @include transition-two(opacity, visibility, 500ms, 50ms);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.backdrop .modal {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  transform: scale(1);
+
+  max-width: 450px;
+  max-height: 609px;
+  cursor: initial;
+  background-color: var(--bg-color-white);
+
+  @include transition(transform, 250ms, 0ms);
+  @media screen and (min-width: $min-width-desc) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 528px;
+    height: 581px;
+  }
+}
+
+@media screen and (min-width: $min-width-mob) {
+}
+
+@media screen and (min-width: $min-width-tab) {
+}
+
+@media screen and (min-width: $min-width-desc) {
+}
+/* Modal form */
+.form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 12px;
+
+    @include font(700, 20, 30, 0.03, null);
+    text-align: center;
+
+    color: var(--title-text-color);
+  }
+}
+
+/* Modal form - input */
+.field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.field__title {
+  display: block;
+  margin-bottom: 4px;
+
+  @include font(400, 12, 14, 0.01, null);
+
+  color: var(--main-text-color);
+}
+
+.field__icon {
+  position: absolute;
+  left: 11px;
+  bottom: 12px;
+
+  display: block;
+}
+
+.field__input {
+  display: block;
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transition(outline-color, 250ms, null);
+
+  &:focus,
+  &:hover {
+    outline-color: var(--accent-color);
+  }
+}
+
+.comments {
+  width: 100%;
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    height: 120px;
+    resize: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include transition(outline-color, 250ms, null);
+    &:focus,
+    &:hover {
+      outline-color: var(--accent-color);
+    }
+  }
+}
+
+.field__icon,
+.modal__button .icon {
+  fill: currentColor;
+  @include transition-two(fill, transform, 250ms, null);
+}
+
+.field__input:focus + .field__icon {
+  fill: var(--accent-color);
+
+  animation: zoom 250ms var(--timing-function) 50ms 1 alternate;
+}
+
+.field__input:not(:placeholder-shown) + .field__icon {
+  fill: var(--accent-color);
+
+  animation: zoom 250ms var(--timing-function) 50ms 1 alternate;
+}
+
+/* ---------- Checkbox ------ */
+.checkbox {
+  width: 100%;
+  display: flex;
+
+  margin-bottom: 30px;
+  &__txt {
+    @include font(400, 12, 14, 0.03, null);
+    color: var(--main-text-color);
+
+    @media screen and (min-width: $min-width-desc) {
+      @include font(400, 14, 24, 0.03, null);
+    }
+  }
+
+  &__link {
+    @include font(400, 12, 14, 0.03, null);
+    color: var(--accent-color);
+    text-underline-offset: 10%;
+  }
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 2px;
+
+    margin-right: 7px;
+  }
+}
+@media screen and (min-width: $min-width-desc) {
+  .checkbox {
+    @include flex-position-gap(center, 0px);
+    margin-bottom: 30px;
+    &__txt {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      letter-spacing: 0.03em;
+
+      color: var(--main-text-color);
+    }
+
+    &__link {
+      color: var(--accent-color);
+      text-underline-offset: 10%;
+    }
+    &__icon {
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      border: 2px solid black;
+      border-radius: 2px;
+
+      margin-right: 7px;
+    }
+  }
+}
+.checkbox__input:checked + .checkbox__icon {
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
+
+  animation: zoom 250ms var(--timing-function) 50ms 1 alternate;
+}
+
+/* Checkbox */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}

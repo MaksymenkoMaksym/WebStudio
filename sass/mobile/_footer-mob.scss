@@ -1,0 +1,45 @@
+@media screen and (min-width: $min-width-mob) and (max-width: $max-width-mob) {
+  .footer {
+    background-color: var(--bg-color-black);
+  }
+
+  .bottom {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    text-align: center;
+
+    &__title {
+      display: block;
+      margin-bottom: 20px;
+
+      font-weight: 700;
+      color: var(--title-white-color);
+    }
+  }
+
+  .bottom__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .address {
+    &__logo {
+      margin-bottom: 20px;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &__block {
+      font-style: normal;
+    }
+  }
+
+  .address__link {
+    @include font(400, 14, 24, 0.03, none);
+    color: var(--address-text-gray);
+
+    &--color {
+      color: var(--address-text-white);
+    }
+  }
+}

@@ -3,69 +3,78 @@
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.hidden-element {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+  .hidden-element {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 
-  /* Second method */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+    /* Second method */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Non-prefixed version, currentlynot supported by any browser */
-}
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Non-prefixed version, currentlynot supported by any browser */
+  }
 
-.title {
-  color: var(--title-text-color);
+  .title {
+    color: var(--title-text-color);
 
-  @include font(null, 36, 42, 0.03, none);
-  text-align: center;
-}
+    @include font(null, 36, 42, 0.03, none);
+    text-align: center;
+  }
 
-.subtitle {
-  color: var(--title-text-color);
+  .subtitle {
+    color: var(--title-text-color);
 
-  @include font(null, 14, 16, 0.03, none);
-  text-transform: uppercase;
-}
+    @include font(null, 14, 16, 0.03, none);
+    text-transform: uppercase;
+  }
 
-.link {
-  position: relative;
+  .link {
+    position: relative;
 
-  display: block;
+    display: block;
 
-  color: var(--title-text-color);
+    color: var(--title-text-color);
 
-  @include font(500, 14, 16, 0.02, none);
-  @include transition(color, 250ms, null);
+    @include font(500, 14, 16, 0.02, none);
+    @include transition(color, 250ms, null);
 
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    outline: none;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      outline: none;
+    }
   }
 }

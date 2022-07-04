@@ -1,0 +1,41 @@
+@media screen and (min-width: $min-width-mob) and (max-width: $max-width-mob) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+
+    width: 100%;
+
+    border-bottom: 1px solid #ececec;
+
+    background-color: var(--bg-color-white);
+  }
+
+  .site-nav {
+    @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
+    flex-direction: column;
+  }
+
+  .contacts-list {
+    @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
+    flex-direction: column;
+    margin-bottom: 64px;
+
+    &__icon {
+      display: none;
+    }
+  }
+
+  .contacts-list__link {
+    &--blue {
+      @include font(500, 34, 40, 0.02, none);
+      color: #2196f3;
+    }
+    &--grey {
+      @include font(null, 24, 28, 0.02, null);
+      color: currentColor;
+    }
+  }
+}

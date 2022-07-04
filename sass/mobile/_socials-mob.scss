@@ -8,15 +8,7 @@
   &--border:not(:last-child) {
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
-    @media screen and (min-width: $min-width-tab) {
-      padding: 0;
-      border: none;
-    }
   }
-}
-
-.social__icon {
-  fill: currentColor;
 }
 
 .social__link {
@@ -28,24 +20,43 @@
   /* animation */
   @include transition(color, 250ms, null);
 
+  &:hover,
+  &:focus {
+    color: var(--title-text-color);
+  }
+
+  &--color {
+    color: var(--accent-color);
+  }
   &--background {
     border-radius: 50%;
     background-color: var(--bg-social-link);
   }
-  @media screen and (max-width: $max-width-mob) {
-    &:hover,
-    &:focus {
-      color: var(--title-text-color);
-    }
+}
 
-    &--color {
-      color: var(--accent-color);
-    }
+.social__icon {
+  fill: currentColor;
+}
+
+@media screen and (min-width: 1600px) {
+  .social {
+    @include flex-position-gap(center, 10px);
   }
-  @media screen and (min-width: $min-width-tab) {
-    border-radius: 50%;
+
+  .social__link {
+    @include flex-position-gap(center, null);
+    min-width: 44px;
+    min-height: 44px;
+
+    color: var(--social-icon-color);
+
     /* animation */
     @include transition-two(color, background-color, 250ms, null);
+
+    &--background {
+      border-radius: 50%;
+      background-color: var(--bg-social-link);
+    }
 
     &:hover,
     &:focus {
@@ -54,10 +65,8 @@
       color: var(--social-icon-color-hover);
     }
   }
-}
 
-.navigation-panel__social {
-  @media screen and (min-width: $min-width-tab) {
-    display: none;
+  .social__icon {
+    fill: currentColor;
   }
 }

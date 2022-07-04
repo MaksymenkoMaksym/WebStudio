@@ -1,0 +1,65 @@
+// Team blocks
+
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  background-color: var(--bg-color-gray);
+  @media screen and (min-width: $min-width-desc) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media screen and (min-width: $min-width-desc) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.team-list {
+  @include flex-position-gap(center, 30px);
+
+  &__item {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    background-color: var(--bg-color-white);
+    box-shadow: var(--box-shadow-team);
+    @include flex_item_width(1, 30px);
+    @media screen and (min-width: $min-width-tab) {
+      @include flex_item_width(2, 30px);
+    }
+
+    @media screen and (min-width: $min-width-desc) {
+      @include flex_item_width(4, 30px);
+    }
+  }
+
+  &__box {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    @media screen and (min-width: $min-width-desc) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// Team text
+.team-list {
+  &__subtitle {
+    margin-bottom: 10px;
+    @include font(500, 16, 19, 0.03, null);
+    text-transform: none;
+    text-align: center;
+    @media screen and (min-width: $min-width-desc) {
+      text-align: left;
+    }
+  }
+  &__text {
+    margin-bottom: 16px;
+    @include font(null, 16, 19, 0.03, null);
+  }
+}

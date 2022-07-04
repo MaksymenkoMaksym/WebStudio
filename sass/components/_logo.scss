@@ -4,11 +4,6 @@
 
   font-family: 'Raleway';
   @include font(700, 26, 31, 0.03, none);
-  //   font-weight: 700;
-  //   font-size: 26px;
-  //   line-height: calc(31/26);
-  //   letter-spacing: 0.03em;
-  //   text-decoration: none;
 
   &--black {
     color: var(--black-color-logo);

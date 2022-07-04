@@ -1,0 +1,64 @@
+.hero {
+  padding: 118px 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-color-black);
+  background-image: var(--hero-gradient-color), url(../images/hero/hero-bg.jpg);
+  background-repeat: no-repeat;
+  &__title {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: 360px;
+
+    color: var(--title-white-color);
+
+    @include font(900, 26, 42, 0.06, null);
+
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: $min-width-mob) {
+    padding: 118px 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-color-black);
+    background-image: var(--hero-gradient-color), url(../images/hero/hero-bg.jpg);
+    background-repeat: no-repeat;
+    &__title {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+      width: 360px;
+
+      color: var(--title-white-color);
+
+      @include font(900, 26, 42, 0.06, null);
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: $min-width-tab) {
+    // max-width: 768px;
+  }
+
+  @media screen and (min-width: $min-width-desc) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    &__title {
+      width: 696px;
+      @include font(900, 44, 60, 0.06, null);
+    }
+  }
+}
