@@ -33,8 +33,8 @@
   margin-left: auto;
   transform: scale(1);
 
-  max-width: 450px;
-  max-height: 609px;
+  width: 450px;
+  height: 609px;
   cursor: initial;
   background-color: var(--bg-color-white);
 
@@ -50,14 +50,6 @@
   }
 }
 
-@media screen and (min-width: $min-width-mob) {
-}
-
-@media screen and (min-width: $min-width-tab) {
-}
-
-@media screen and (min-width: $min-width-desc) {
-}
 /* Modal form */
 .form {
   width: 100%;
@@ -68,12 +60,16 @@
   align-items: center;
 
   &__title {
+    display: block;
     margin-bottom: 12px;
-
-    @include font(700, 20, 30, 0.03, null);
+    @include font(null, 20, 30, 0.03, null);
     text-align: center;
 
     color: var(--title-text-color);
+
+    @media screen and (min-width: $min-width-desc) {
+      @include font(null, 20, 23, 0.03, null);
+    }
   }
 }
 
@@ -157,9 +153,7 @@
 
 /* ---------- Checkbox ------ */
 .checkbox {
-  width: 100%;
-  display: flex;
-
+  @include flex-position-gap(center, 0px);
   margin-bottom: 30px;
   &__txt {
     @include font(400, 12, 14, 0.03, null);
@@ -185,34 +179,7 @@
     margin-right: 7px;
   }
 }
-@media screen and (min-width: $min-width-desc) {
-  .checkbox {
-    @include flex-position-gap(center, 0px);
-    margin-bottom: 30px;
-    &__txt {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: calc(24 / 14);
-      letter-spacing: 0.03em;
 
-      color: var(--main-text-color);
-    }
-
-    &__link {
-      color: var(--accent-color);
-      text-underline-offset: 10%;
-    }
-    &__icon {
-      display: inline-block;
-      width: 16px;
-      height: 15px;
-      border: 2px solid black;
-      border-radius: 2px;
-
-      margin-right: 7px;
-    }
-  }
-}
 .checkbox__input:checked + .checkbox__icon {
   background-color: var(--accent-color);
   background-image: url('../images/icon-check.svg');
