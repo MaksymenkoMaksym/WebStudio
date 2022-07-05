@@ -35,10 +35,16 @@
 
   width: 450px;
   height: 609px;
+
+  @media screen and (max-width: 479.98px) {
+    width: 100%;
+    height: auto;
+  }
+
   cursor: initial;
   background-color: var(--bg-color-white);
-
   @include transition(transform, 250ms, 0ms);
+
   @media screen and (min-width: $min-width-desc) {
     position: absolute;
     top: 50%;
@@ -58,6 +64,9 @@
   flex-direction: column;
   padding: 40px;
   align-items: center;
+  @media screen and (max-width: 479.98px) {
+    padding: 20px;
+  }
 
   &__title {
     display: block;
@@ -153,8 +162,12 @@
 
 /* ---------- Checkbox ------ */
 .checkbox {
-  @include flex-position-gap(center, 0px);
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 479.98px) {
+  }
   &__txt {
     @include font(400, 12, 14, 0.03, null);
     color: var(--main-text-color);
