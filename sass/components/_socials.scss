@@ -57,6 +57,9 @@
 }
 
 .navigation-panel__social {
+  @media screen and (max-width: 479.98px) {
+    flex-wrap: wrap;
+  }
   @media screen and (min-width: $min-width-tab) {
     display: none;
   }

@@ -29,6 +29,7 @@
     background-color: var(--bg-color-white);
     box-shadow: var(--box-shadow-team);
     @include flex_item_width(1, 30px);
+
     @media screen and (min-width: $min-width-tab) {
       @include flex_item_width(2, 30px);
     }
@@ -54,6 +55,7 @@
     @include font(500, 16, 19, 0.03, null);
     text-transform: none;
     text-align: center;
+
     @media screen and (min-width: $min-width-desc) {
       text-align: left;
     }

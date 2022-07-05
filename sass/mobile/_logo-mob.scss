@@ -12,12 +12,6 @@
   &--white {
     color: var(--white-color-logo);
   }
-
-  @media screen and (min-width: $min-width-mob) {
-    display: inline-block;
-    @include font(700, 24, 28, 0.03, none);
-  }
-
   @media screen and (min-width: $min-width-desc) {
     display: block;
     @include font(700, 26, 31, 0.03, none);

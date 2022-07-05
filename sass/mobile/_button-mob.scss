@@ -63,36 +63,31 @@
 
 .button__menu {
   z-index: 103;
-  @media screen and (max-width: $max-width-mob) {
-    position: absolute;
-    top: 10px;
-    right: 15px;
 
-    display: inline-flex;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 
-    @include transition(color, 250ms, null);
-    &:hover {
-      color: var(--accent-color);
-    }
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  @include transition(color, 250ms, null);
+  &:hover {
+    color: var(--accent-color);
   }
+
   @media screen and (min-width: $min-width-tab) {
-    display: none;
-  }
-
-  @media screen and (min-width: $min-width-desc) {
     display: none;
   }
 }
 
 .button__menu .icon-menu-closed {
-  @media screen and (max-width: $max-width-mob) {
-    display: none;
-    fill: currentColor;
-  }
+  display: none;
+  fill: currentColor;
+
   @media screen and (min-width: $min-width-tab) {
     display: none;
   }
@@ -103,92 +98,58 @@
 }
 
 .button__menu .icon-menu {
-  @media screen and (max-width: $max-width-mob) {
-    display: block;
-    fill: currentColor;
-  }
-  @media screen and (min-width: $min-width-tab) {
-    display: none;
-  }
+  display: block;
+  fill: currentColor;
 
-  @media screen and (min-width: $min-width-desc) {
+  @media screen and (min-width: $min-width-tab) {
     display: none;
   }
 }
 
 .button__menu.is-open .icon-menu-closed {
-  @media screen and (max-width: $max-width-mob) {
-    display: block;
-  }
-  @media screen and (min-width: $min-width-tab) {
-    display: none;
-  }
+  position: absolute;
+  top: 10px;
+  right: 15px;
 
-  @media screen and (min-width: $min-width-desc) {
+  display: block;
+  @media screen and (min-width: $min-width-tab) {
     display: none;
   }
 }
 
 .button__menu.is-open .icon-menu {
-  @media screen and (max-width: $max-width-mob) {
-    display: none;
-    fill: currentColor;
-  }
-  @media screen and (min-width: $min-width-tab) {
-    display: none;
-  }
+  display: none;
+  fill: currentColor;
 
-  @media screen and (min-width: $min-width-desc) {
+  @media screen and (min-width: $min-width-tab) {
     display: none;
   }
 }
 // =============
 .menu-container {
   display: none;
-  @media screen and (max-width: $max-width-mob) {
-    display: none;
-  }
+
   @media screen and (min-width: $min-width-tab) {
     display: flex;
     flex-grow: 1;
   }
-
-  @media screen and (min-width: $min-width-desc) {
-    display: flex;
-  }
 }
 
 .menu-container.is-open {
-  @media screen and (max-width: $max-width-mob) {
-    // outline: 2px solid red;
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 102;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 102;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  max-height: 796px;
+  padding: 48px 40px;
 
-    width: 100%;
-    height: 92vh;
-    max-height: 796px;
-    padding: 48px 40px;
-
-    background-color: #fff;
-  }
-  @media screen and (min-width: $min-width-tab) {
-    // display: none;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    background-color: #fff;
-  }
-
-  @media screen and (min-width: $min-width-desc) {
-    display: none;
-  }
+  background-color: #fff;
 }

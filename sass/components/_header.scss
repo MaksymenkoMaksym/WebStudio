@@ -10,10 +10,8 @@
 
   background-color: var(--bg-color-white);
   &__logo {
-    @media screen and (min-width: $min-width-mob) {
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     @media screen and (min-width: $min-width-tab) {
       padding-top: 26px;
@@ -28,19 +26,12 @@
 }
 
 .navigation-panel {
-  // display: none;
   @media screen and (min-width: $min-width-tab) {
     display: flex;
   }
 
-  @media screen and (min-width: $min-width-desc) {
-    display: flex;
-  }
   &__social {
     @media screen and (min-width: $min-width-tab) {
-      display: none;
-    }
-    @media screen and (min-width: $min-width-desc) {
       display: none;
     }
   }
@@ -48,20 +39,14 @@
 // ===============
 //
 .main-nav {
-  @media screen and (min-width: $min-width-tab) {
-    max-width: 768px;
-  }
-
   @media screen and (min-width: $min-width-desc) {
     @include dispay-vertical-horizontal-gap(flex, center, center, null);
   }
 }
 
 .site-nav {
-  @media screen and (min-width: $min-width-mob) {
-    @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
-    flex-direction: column;
-  }
+  @include dispay-vertical-horizontal-gap(flex, flex-start, center, 32px);
+  flex-direction: column;
 
   @media screen and (min-width: $min-width-tab) {
     @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
@@ -98,7 +83,6 @@
   @media screen and (min-width: $min-width-desc) {
     @include dispay-vertical-horizontal-gap(flex, center, center, 50px);
     flex-direction: row;
-    margin-left: auto;
   }
 
   &__icon {
@@ -112,6 +96,9 @@
 
 .contacts-list__link {
   &--blue {
+    @media screen and (max-width: 479.98px) {
+      font-size: 24px;
+    }
     @include font(500, 34, 40, 0.02, none);
     color: #2196f3;
     @media screen and (min-width: $min-width-tab) {

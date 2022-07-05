@@ -15,9 +15,6 @@
   }
 
   @media screen and (min-width: $min-width-desc) {
-    display: flex;
-    align-items: baseline;
-
     text-align: left;
   }
   &__title {

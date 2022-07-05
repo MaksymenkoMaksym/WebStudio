@@ -2,16 +2,6 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: $min-width-mob) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  @media screen and (min-width: $min-width-tab) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
   @media screen and (min-width: $min-width-desc) {
     padding-top: 94px;
     padding-bottom: 47px;
@@ -19,10 +9,9 @@
 }
 
 .feature-list {
-  @media screen and (min-width: $min-width-mob) {
-    &__item:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  @include flex-position-gap(null, 30px);
+  &__item {
+    @include flex_item_width(1, 30px);
   }
 
   @media screen and (min-width: $min-width-tab) {

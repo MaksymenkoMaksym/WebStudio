@@ -10,10 +10,6 @@ body {
 
 main {
   padding-top: 61px;
-  @media screen and (min-width: $min-width-mob) {
-    padding-top: 61px;
-  }
-
   @media screen and (min-width: $min-width-tab) {
     padding-top: 81px;
   }
@@ -36,5 +32,3 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-// exp
