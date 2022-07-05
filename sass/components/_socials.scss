@@ -2,16 +2,10 @@
 
 .social {
   @include dispay-vertical-horizontal-gap(inline-flex, center, center, 10px);
-}
 
-.social__item {
-  &--border:not(:last-child) {
+  &__txt {
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
-    @media screen and (min-width: $min-width-tab) {
-      padding: 0;
-      border: none;
-    }
   }
 }
 
@@ -56,11 +50,20 @@
   }
 }
 
-.navigation-panel__social {
-  @media screen and (max-width: 479.98px) {
-    flex-wrap: wrap;
+.navigation-panel {
+  & .social__link {
+    max-height: 20px;
   }
-  @media screen and (min-width: $min-width-tab) {
-    display: none;
+  &__social {
+    justify-content: flex-start;
+
+    @include font(500, 18, 22, 0.02, none);
+
+    @media screen and (max-width: 479.98px) {
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $min-width-tab) {
+      display: none;
+    }
   }
 }
