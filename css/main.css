@@ -1041,31 +1041,31 @@ ul {
   background-position: center;
   background-color: var(--bg-color-black);
   background-repeat: no-repeat;
-  background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_sm.jpg);
+  background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_sm.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_sm@2x.jpg);
+    background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_sm@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_lg.jpg);
+    background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_lg.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_lg@2x.jpg.jpg);
+    background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_lg@2x.jpg.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_x-lg.jpg);
+    background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_x-lg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient-color), url(../../images/hero/hero-bg_x-lg@2x.jpg);
+    background-image: var(--hero-gradient-color), url(./images/hero/hero-bg_x-lg@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
